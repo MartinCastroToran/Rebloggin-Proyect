@@ -1,0 +1,77 @@
+<%- include("partials/header.ejs") %>
+<section id="posting">
+    <div class="post-container">
+            <form action="/my-blogs" method="post" enctype="multipart/form-data">
+                <div class="submit-cont">
+                    <div>
+                        <div class="aut-cont">
+                            <label for="author">Author:</label><br>
+                            <input class="author" type="text"name="author" maxlength="100" required>
+                        </div>
+    
+                        <div>
+                            <label for="gender">Select your blog Type </label><br>
+                            <button id="display" class="row-g-list"><i class="bi bi-caret-down-fill"></i></svg></button>
+                            <div class="gender-cont">
+                                <div class="form-group">
+                                    <input id="healty" type="radio" name="gender" value="Healty" required>
+                                    <label for="healty"><span class="radio-input"></span>Healty</label><br>
+    
+                                </div>
+                                <div class="form-group">
+                                    <input id="food" type="radio" name="gender" value="Food" required>
+                                    <label for="food"><span class="radio-input"></span>Food</label><br>
+    
+                                </div>
+                                <div class="form-group">
+                                    <input id="sports" type="radio" name="gender" value="Sports" required>
+                                    <label for="sports"><span class="radio-input"></span>Sports</label><br>
+    
+                                </div>
+                                <div class="form-group">
+                                    <input id="personal" type="radio" name="gender" value="Personal" required>
+                                    <label for="personal"><span class="radio-input"></span>Personal</label><br>
+    
+                                </div>
+                                <div class="form-group">
+                                    <input id="informative" type="radio" name="gender" value="Informative" required>
+                                    <label for="informative"><span class="radio-input"></span>Informative</label><br>
+    
+                                </div>
+                                <div class="form-group">
+                                    <input id="other" type="radio" name="gender" value="Other" required>
+                                    <label for="other"><span class="radio-input"></span>Other</label><br>
+    
+                                </div>
+                            </div>
+                        </div>       
+                    </div>
+                    <div>
+                        <div class="container-image-input">
+                            <input type="file" name="file-1" id="file-1" class="inputfile inputfile-1" data-multiple-caption="{count} archivos seleccionados" multiple />
+                            <label for="file-1">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="iborrainputfile" width="20" height="17" viewBox="0 0 20 17"><path d="M10 0l-5.2 4.9h3.3v5.1h3.8v-5.1h3.3l-5.2-4.9zm9.3 11.5l-3.2-2.1h-2l3.4 2.6h-3.5c-.1 0-.2.1-.2.1l-.8 2.3h-6l-.8-2.2c-.1-.1-.1-.2-.2-.2h-3.6l3.4-2.6h-2l-3.2 2.1c-.4.3-.7 1-.6 1.5l.6 3.1c.1.5.7.9 1.2.9h16.3c.6 0 1.1-.4 1.3-.9l.6-3.1c.1-.5-.2-1.2-.7-1.5z"></path></svg>
+                            <span class="iborrainputfile">Select image</span>
+                            </label>
+                        </div>
+                        <input id="submit" type="submit" value="Post">
+                    </div>
+                    
+                </div>
+                <div class="text-cont">
+                    <div>     
+                    <input class="title-post" type="text"maxlength="100" name="title" placeholder="Title here" required><br>
+                    </div>
+                    <div>
+                        <input class="subtitle-post" type="text"maxlength="100" name="subTitle" placeholder="Subtitle here" required><br>
+                    </div>
+                    <div class="col-text">
+                        <textarea class="text-post" type="text" maxlength="1000" name="cont" placeholder="Text here" required></textarea><br>
+                    </div>
+                </div>
+
+        </form>
+        
+    </div>
+</section>
+<%- include("partials/footer.ejs") %>

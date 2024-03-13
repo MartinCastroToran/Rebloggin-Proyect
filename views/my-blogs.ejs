@@ -1,0 +1,29 @@
+<%- include("partials/header.ejs") %>
+<section id="my-blogs">
+    <% if (locals.arr && locals.imgArr && arr.length !== 0) { %>
+        <div>
+            <h1 class="title-1">Your Blogs</h1> 
+            <div class="grid-blogs">
+                <% for (let i = 0; i < arr.length; i++) { %>
+                <div class="blog-prev <% i %>">
+                    <a href="/blogs/<%= arr[i] %>">
+                            <div>
+                                <img class="blogImg" src="<%= imgArr[i] %>" alt="Imagen">
+                            </div>
+                        <h3 class="blogTitle"><%=capitalize( arr[i].slice(0, -5).slice(1).replaceAll("-", " ") )%></h3>
+                    </a>
+                </div>    
+                <% } %>
+            </div>
+        </div>
+        
+    <% } else { %>
+        <div class="list">
+            <a class="link" href="/posting"><h1 class="title-1 title-prov">Post your first blog!</h1> </a>  
+        </div>
+    <% } %>
+</section>
+    
+
+
+<%- include("partials/footer.ejs") %>
